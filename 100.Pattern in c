@@ -1,0 +1,53 @@
+Pattern :-
+
+        *
+       ***
+      *****
+     *******
+    *********
+
+Code :-
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// // Main Function Start
+int main()
+{
+    int maxRows, maxCols;
+    printf("\nHow Many Rows => ");
+    scanf("%d", &maxRows);
+
+    // // Handling Invalid Input
+    if (maxRows < 1)
+    {
+        printf("\n!!! Invalid Input,Plz Enter Positive Number....");
+        exit(0);
+    }
+
+    // // Determine Number of Columns According to maxRows
+    maxCols = maxRows * 2 - 1;
+
+    // // Print Pattern
+    puts("\n--------------------------------------------\n");
+
+    int colsInCurrentRow, spacesInCurrentRow;
+
+    for (int row = 1; row <= maxRows; row++)
+    {
+        spacesInCurrentRow = (maxRows - row) * 2;
+        colsInCurrentRow = maxCols - spacesInCurrentRow;
+        // // colsInCurrentRow = row * 2 - 1;
+
+        for (int space = 1; space <= spacesInCurrentRow / 2; space++)
+            printf(" ");
+
+        for (int col = 1; col <= colsInCurrentRow; col++)
+            printf("*");
+
+        printf("\n");
+    }
+     printf("\n");
+
+    return 0;
+}
