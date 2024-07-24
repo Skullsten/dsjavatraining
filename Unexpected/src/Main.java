@@ -1,6 +1,6 @@
 import java.io.*;
 
-class GFG {
+class Skull {
     public static void main(String[] args)
     {
 
@@ -8,7 +8,7 @@ class GFG {
 
         do {
             i++;
-            System.out.println("GfG");
+            System.out.println("skull");
         } while (i < 10);
     }
 }
